@@ -1,0 +1,41 @@
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;  /* This aligns the logo on the left and menu items on the right */
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+}
+
+/* Styling for the logo */
+.navbar-logo {
+    font-size: 30px;  /* Make the logo bigger */
+    font-weight: bold;
+    color: #fff;  /* Set the same color as the links */
+    text-decoration: none;
+}
+
+/* Menu container to align menu items */
+.navbar-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Styling for each navbar item */
+.navbar-item {
+    margin: 0 15px;
+}
+
+/* Styling for the links */
+.navbar-links {
+    color: #fff;  /* White color for links */
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar-links:hover {
+    text-decoration: underline;
+}

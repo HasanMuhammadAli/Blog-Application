@@ -1,0 +1,219 @@
+/* Main Blog List Container */
+.blog-list-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+.blog-list-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+}
+
+.loading-message,
+.error-message,
+.no-blogs-message {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #666;
+}
+
+.blog-list {
+    list-style: none;
+    padding: 0;
+}
+
+.blog-item {
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.blog-item:hover {
+    transform: scale(1.02);  /* Hover effect to slightly enlarge the blog item */
+}
+
+.blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog-header h3 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: #444;
+    font-weight: bold;
+}
+
+.blog-header {
+    display: flex;
+    justify-content: space-between; /* Distribute buttons properly */
+    align-items: center;
+}
+
+.delete-button,
+.update-button {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    
+    width: 100px;
+    display: inline-block; 
+    box-sizing: border-box; 
+}
+
+.update-button {
+    background-color: #4caf50; 
+}
+
+
+.delete-button:hover,
+.update-button:hover {
+    background-color: #e94346;  
+    transform: translateY(-2px); 
+}
+
+
+.update-button:hover {
+    background-color: #45a049;  
+}
+
+
+.delete-button:active,
+.update-button:active {
+    transform: translateY(2px); 
+}
+
+.blog-item p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.blog-item strong {
+    color: #333;
+}
+
+.update-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 500px;
+    max-width: 90%;  /* Ensure it's responsive */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 1rem;
+    color: #444;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #56ff4d;
+    outline: none;
+}
+
+textarea {
+    height: 120px;  /* For better space to update content */
+    resize: vertical;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #56ff4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 48%;  /* Equal width for both buttons */
+}
+
+button[type="button"] {
+    background-color: #2196f3;  /* Blue color for Cancel button */
+}
+
+button[type="button"]:hover {
+    background-color: #1976d2;  /* Darker blue on hover */
+}
+
+button[type="submit"] {
+    background-color: #1db715;  /* Green color for Update button */
+}
+
+button[type="submit"]:hover {
+    background-color: #108f09;  /* Darker green on hover */
+}
+
+button:hover {
+    opacity: 0.9;  /* Slightly reduce opacity for hover effect */
+}
+
+button:active {
+    transform: translateY(2px);  /* Button pressed down on click */
+}
+
+/* General modal background fading */
+.update-modal {
+    transition: opacity 0.3s ease-in-out;
+}
